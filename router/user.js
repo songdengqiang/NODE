@@ -8,9 +8,13 @@ const pak = new packages();
 /* 用户界面功能 */
 router.use('/kGraph',Kgraph);
 router.get('/getFuncName', function(req, res){
-    pak.readJson('Login.json',function(data){
-        pak.writeJson('ddd.json',data)
-        res.send('cdd')
+    pak.readJson('imgStyle.json',function(data){
+        res.send(data)
+    })
+})
+router.get('/getSaying', function(req, res){
+    pak.readJson('saying.json',function(data){
+        res.send(data)
     })
 })
 
