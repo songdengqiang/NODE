@@ -1,6 +1,6 @@
 [
     {
-        "name": "风景", "num": 0, "imgS": [
+        "name": "风景", "num": 4, "id": 0, "imgS": [
             {"imgPath": "/img/power1.jpg", "Saying": "阅读一切好书如同和过去最杰出的人谈话。", "name": ""},
             {"imgPath": "/img/power2.jpg", "Saying": "与肝胆人共事，无字句处读书。", "name": ""},
             {"imgPath": "/img/power3.jpg", "Saying": "最困难的事情就是认识自己。", "name": ""},
@@ -8,12 +8,12 @@
         ]
     },
     {
-        "name": "人物", "num": 0, "path": "", "imgS": []
+        "name": "人物", "num": 0, "id": 1, "imgS": []
     },
     {
-        "name": "汽车", "num": 0, "path": "", "imgS": []
+        "name": "汽车", "num": 0, "id": 2, "imgS": []
     },
     {
-        "name": "照片", "num": 0, "path": "", "imgS": []
+        "name": "照片", "num": 0, "id": 3, "imgS": []
     }
 ]
