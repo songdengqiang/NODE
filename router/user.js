@@ -17,5 +17,8 @@ router.get('/getSaying', function(req, res){
         res.send(data)
     })
 })
+router.post('/postImgData', function(req, res){
+    res.send('成功!')
+})
 
 module.exports = router;
