@@ -5,6 +5,9 @@ const fs = require('fs')
 const packages = require('../myPackage');
 const pak = new packages();
 const multiparty = require('multiparty');
+const url = require('url')
+const axios = require('axios')
+const cheerio = require('cheerio')
 
 /* 用户界面功能 */
 router.use('/kGraph',Kgraph);
@@ -57,6 +60,25 @@ router.post('/postImgData', function(req, res){
                 res.send('成功！')
             }
         }) 
+    })
+})
+router.get('/ceshi', function (req, res) {
+    let httpUrl = 'http://www.5tu.cn/colors/yansebiao.html'
+    let colorList = []
+    axios.get(httpUrl,{}).then(function (ress) {
+        let $ = cheerio.load(ress.data)
+        $('.tableborder>tr').each((i, element) => {
+            console.log($(element).find('td').)
+            // // if (colorTitle !== undefined) {
+            // //     let lists = colorTitle.split(',')
+            // //     colorJson.RGB = lists[0]
+            // //     colorJson.name = lists[1]
+            // //     colorList.push(colorJson)
+            // // }
+        })
+        
+        // console.log($)
+        res.send(colorList)
     })
 })
 
