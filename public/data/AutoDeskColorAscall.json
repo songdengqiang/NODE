@@ -1,0 +1,1532 @@
+[
+    {
+        "AciValue": "1",
+        "decimal_R": "255",
+        "decimal_G": "0",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "2",
+        "decimal_R": "255",
+        "decimal_G": "255",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "3",
+        "decimal_R": "0",
+        "decimal_G": "255",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "4",
+        "decimal_R": "0",
+        "decimal_G": "255",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "5",
+        "decimal_R": "0",
+        "decimal_G": "0",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "6",
+        "decimal_R": "255",
+        "decimal_G": "0",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "7",
+        "decimal_R": "0",
+        "decimal_G": "0",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "8",
+        "decimal_R": "128",
+        "decimal_G": "128",
+        "decimal_B": "128"
+    },
+    {
+        "AciValue": "9",
+        "decimal_R": "192",
+        "decimal_G": "192",
+        "decimal_B": "192"
+    },
+    {
+        "AciValue": "10",
+        "decimal_R": "255",
+        "decimal_G": "0",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "11",
+        "decimal_R": "255",
+        "decimal_G": "127",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "12",
+        "decimal_R": "204",
+        "decimal_G": "0",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "13",
+        "decimal_R": "204",
+        "decimal_G": "102",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "14",
+        "decimal_R": "153",
+        "decimal_G": "0",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "15",
+        "decimal_R": "153",
+        "decimal_G": "76",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "16",
+        "decimal_R": "127",
+        "decimal_G": "0",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "17",
+        "decimal_R": "127",
+        "decimal_G": "63",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "18",
+        "decimal_R": "76",
+        "decimal_G": "0",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "19",
+        "decimal_R": "76",
+        "decimal_G": "38",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "20",
+        "decimal_R": "255",
+        "decimal_G": "63",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "21",
+        "decimal_R": "255",
+        "decimal_G": "159",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "22",
+        "decimal_R": "204",
+        "decimal_G": "51",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "23",
+        "decimal_R": "204",
+        "decimal_G": "127",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "24",
+        "decimal_R": "153",
+        "decimal_G": "38",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "25",
+        "decimal_R": "153",
+        "decimal_G": "95",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "26",
+        "decimal_R": "127",
+        "decimal_G": "31",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "27",
+        "decimal_R": "127",
+        "decimal_G": "79",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "28",
+        "decimal_R": "76",
+        "decimal_G": "19",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "29",
+        "decimal_R": "76",
+        "decimal_G": "47",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "30",
+        "decimal_R": "255",
+        "decimal_G": "127",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "31",
+        "decimal_R": "255",
+        "decimal_G": "191",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "32",
+        "decimal_R": "204",
+        "decimal_G": "102",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "33",
+        "decimal_R": "204",
+        "decimal_G": "153",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "34",
+        "decimal_R": "153",
+        "decimal_G": "76",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "35",
+        "decimal_R": "153",
+        "decimal_G": "114",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "36",
+        "decimal_R": "127",
+        "decimal_G": "63",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "37",
+        "decimal_R": "127",
+        "decimal_G": "95",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "38",
+        "decimal_R": "76",
+        "decimal_G": "38",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "39",
+        "decimal_R": "76",
+        "decimal_G": "57",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "40",
+        "decimal_R": "255",
+        "decimal_G": "191",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "41",
+        "decimal_R": "255",
+        "decimal_G": "223",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "42",
+        "decimal_R": "204",
+        "decimal_G": "153",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "43",
+        "decimal_R": "204",
+        "decimal_G": "178",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "44",
+        "decimal_R": "153",
+        "decimal_G": "114",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "45",
+        "decimal_R": "153",
+        "decimal_G": "133",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "46",
+        "decimal_R": "127",
+        "decimal_G": "95",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "47",
+        "decimal_R": "127",
+        "decimal_G": "111",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "48",
+        "decimal_R": "76",
+        "decimal_G": "57",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "49",
+        "decimal_R": "76",
+        "decimal_G": "66",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "50",
+        "decimal_R": "255",
+        "decimal_G": "255",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "51",
+        "decimal_R": "255",
+        "decimal_G": "255",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "52",
+        "decimal_R": "204",
+        "decimal_G": "204",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "53",
+        "decimal_R": "204",
+        "decimal_G": "204",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "54",
+        "decimal_R": "153",
+        "decimal_G": "153",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "55",
+        "decimal_R": "153",
+        "decimal_G": "153",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "56",
+        "decimal_R": "127",
+        "decimal_G": "127",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "57",
+        "decimal_R": "127",
+        "decimal_G": "127",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "58",
+        "decimal_R": "76",
+        "decimal_G": "76",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "59",
+        "decimal_R": "76",
+        "decimal_G": "76",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "60",
+        "decimal_R": "191",
+        "decimal_G": "255",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "61",
+        "decimal_R": "223",
+        "decimal_G": "255",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "62",
+        "decimal_R": "153",
+        "decimal_G": "204",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "63",
+        "decimal_R": "178",
+        "decimal_G": "204",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "64",
+        "decimal_R": "114",
+        "decimal_G": "153",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "65",
+        "decimal_R": "133",
+        "decimal_G": "153",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "66",
+        "decimal_R": "95",
+        "decimal_G": "127",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "67",
+        "decimal_R": "111",
+        "decimal_G": "127",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "68",
+        "decimal_R": "57",
+        "decimal_G": "76",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "69",
+        "decimal_R": "66",
+        "decimal_G": "76",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "70",
+        "decimal_R": "127",
+        "decimal_G": "255",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "71",
+        "decimal_R": "191",
+        "decimal_G": "255",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "72",
+        "decimal_R": "102",
+        "decimal_G": "204",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "73",
+        "decimal_R": "153",
+        "decimal_G": "204",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "74",
+        "decimal_R": "76",
+        "decimal_G": "153",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "75",
+        "decimal_R": "114",
+        "decimal_G": "153",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "76",
+        "decimal_R": "63",
+        "decimal_G": "127",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "77",
+        "decimal_R": "95",
+        "decimal_G": "127",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "78",
+        "decimal_R": "38",
+        "decimal_G": "76",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "79",
+        "decimal_R": "57",
+        "decimal_G": "76",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "80",
+        "decimal_R": "63",
+        "decimal_G": "255",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "81",
+        "decimal_R": "159",
+        "decimal_G": "255",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "82",
+        "decimal_R": "51",
+        "decimal_G": "204",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "83",
+        "decimal_R": "127",
+        "decimal_G": "204",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "84",
+        "decimal_R": "38",
+        "decimal_G": "153",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "85",
+        "decimal_R": "95",
+        "decimal_G": "153",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "86",
+        "decimal_R": "31",
+        "decimal_G": "127",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "87",
+        "decimal_R": "79",
+        "decimal_G": "127",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "88",
+        "decimal_R": "19",
+        "decimal_G": "76",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "89",
+        "decimal_R": "47",
+        "decimal_G": "76",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "90",
+        "decimal_R": "0",
+        "decimal_G": "255",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "91",
+        "decimal_R": "127",
+        "decimal_G": "255",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "92",
+        "decimal_R": "0",
+        "decimal_G": "204",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "93",
+        "decimal_R": "102",
+        "decimal_G": "204",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "94",
+        "decimal_R": "0",
+        "decimal_G": "153",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "95",
+        "decimal_R": "76",
+        "decimal_G": "153",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "96",
+        "decimal_R": "0",
+        "decimal_G": "127",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "97",
+        "decimal_R": "63",
+        "decimal_G": "127",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "98",
+        "decimal_R": "0",
+        "decimal_G": "76",
+        "decimal_B": "0"
+    },
+    {
+        "AciValue": "99",
+        "decimal_R": "38",
+        "decimal_G": "76",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "100",
+        "decimal_R": "0",
+        "decimal_G": "255",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "101",
+        "decimal_R": "127",
+        "decimal_G": "255",
+        "decimal_B": "159"
+    },
+    {
+        "AciValue": "102",
+        "decimal_R": "0",
+        "decimal_G": "204",
+        "decimal_B": "51"
+    },
+    {
+        "AciValue": "103",
+        "decimal_R": "102",
+        "decimal_G": "204",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "104",
+        "decimal_R": "0",
+        "decimal_G": "153",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "105",
+        "decimal_R": "76",
+        "decimal_G": "153",
+        "decimal_B": "95"
+    },
+    {
+        "AciValue": "106",
+        "decimal_R": "0",
+        "decimal_G": "127",
+        "decimal_B": "31"
+    },
+    {
+        "AciValue": "107",
+        "decimal_R": "63",
+        "decimal_G": "127",
+        "decimal_B": "79"
+    },
+    {
+        "AciValue": "108",
+        "decimal_R": "0",
+        "decimal_G": "76",
+        "decimal_B": "19"
+    },
+    {
+        "AciValue": "109",
+        "decimal_R": "38",
+        "decimal_G": "76",
+        "decimal_B": "47"
+    },
+    {
+        "AciValue": "110",
+        "decimal_R": "0",
+        "decimal_G": "255",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "111",
+        "decimal_R": "127",
+        "decimal_G": "255",
+        "decimal_B": "191"
+    },
+    {
+        "AciValue": "112",
+        "decimal_R": "0",
+        "decimal_G": "204",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "113",
+        "decimal_R": "102",
+        "decimal_G": "204",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "114",
+        "decimal_R": "0",
+        "decimal_G": "153",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "115",
+        "decimal_R": "76",
+        "decimal_G": "153",
+        "decimal_B": "114"
+    },
+    {
+        "AciValue": "116",
+        "decimal_R": "0",
+        "decimal_G": "127",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "117",
+        "decimal_R": "63",
+        "decimal_G": "127",
+        "decimal_B": "95"
+    },
+    {
+        "AciValue": "118",
+        "decimal_R": "0",
+        "decimal_G": "76",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "119",
+        "decimal_R": "38",
+        "decimal_G": "76",
+        "decimal_B": "57"
+    },
+    {
+        "AciValue": "120",
+        "decimal_R": "0",
+        "decimal_G": "255",
+        "decimal_B": "191"
+    },
+    {
+        "AciValue": "121",
+        "decimal_R": "127",
+        "decimal_G": "255",
+        "decimal_B": "223"
+    },
+    {
+        "AciValue": "122",
+        "decimal_R": "0",
+        "decimal_G": "204",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "123",
+        "decimal_R": "102",
+        "decimal_G": "204",
+        "decimal_B": "178"
+    },
+    {
+        "AciValue": "124",
+        "decimal_R": "0",
+        "decimal_G": "153",
+        "decimal_B": "114"
+    },
+    {
+        "AciValue": "125",
+        "decimal_R": "76",
+        "decimal_G": "153",
+        "decimal_B": "133"
+    },
+    {
+        "AciValue": "126",
+        "decimal_R": "0",
+        "decimal_G": "127",
+        "decimal_B": "95"
+    },
+    {
+        "AciValue": "127",
+        "decimal_R": "63",
+        "decimal_G": "127",
+        "decimal_B": "111"
+    },
+    {
+        "AciValue": "128",
+        "decimal_R": "0",
+        "decimal_G": "76",
+        "decimal_B": "57"
+    },
+    {
+        "AciValue": "129",
+        "decimal_R": "38",
+        "decimal_G": "76",
+        "decimal_B": "66"
+    },
+    {
+        "AciValue": "130",
+        "decimal_R": "0",
+        "decimal_G": "255",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "131",
+        "decimal_R": "127",
+        "decimal_G": "255",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "132",
+        "decimal_R": "0",
+        "decimal_G": "204",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "133",
+        "decimal_R": "102",
+        "decimal_G": "204",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "134",
+        "decimal_R": "0",
+        "decimal_G": "153",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "135",
+        "decimal_R": "76",
+        "decimal_G": "153",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "136",
+        "decimal_R": "0",
+        "decimal_G": "127",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "137",
+        "decimal_R": "63",
+        "decimal_G": "127",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "138",
+        "decimal_R": "0",
+        "decimal_G": "76",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "139",
+        "decimal_R": "38",
+        "decimal_G": "76",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "140",
+        "decimal_R": "0",
+        "decimal_G": "191",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "141",
+        "decimal_R": "127",
+        "decimal_G": "223",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "142",
+        "decimal_R": "0",
+        "decimal_G": "153",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "143",
+        "decimal_R": "102",
+        "decimal_G": "178",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "144",
+        "decimal_R": "0",
+        "decimal_G": "114",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "145",
+        "decimal_R": "76",
+        "decimal_G": "133",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "146",
+        "decimal_R": "0",
+        "decimal_G": "95",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "147",
+        "decimal_R": "63",
+        "decimal_G": "111",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "148",
+        "decimal_R": "0",
+        "decimal_G": "57",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "149",
+        "decimal_R": "38",
+        "decimal_G": "66",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "150",
+        "decimal_R": "0",
+        "decimal_G": "127",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "151",
+        "decimal_R": "127",
+        "decimal_G": "191",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "152",
+        "decimal_R": "0",
+        "decimal_G": "102",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "153",
+        "decimal_R": "102",
+        "decimal_G": "153",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "154",
+        "decimal_R": "0",
+        "decimal_G": "76",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "155",
+        "decimal_R": "76",
+        "decimal_G": "114",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "156",
+        "decimal_R": "0",
+        "decimal_G": "63",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "157",
+        "decimal_R": "63",
+        "decimal_G": "95",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "158",
+        "decimal_R": "0",
+        "decimal_G": "38",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "159",
+        "decimal_R": "38",
+        "decimal_G": "57",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "160",
+        "decimal_R": "0",
+        "decimal_G": "63",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "161",
+        "decimal_R": "127",
+        "decimal_G": "159",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "162",
+        "decimal_R": "0",
+        "decimal_G": "51",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "163",
+        "decimal_R": "102",
+        "decimal_G": "127",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "164",
+        "decimal_R": "0",
+        "decimal_G": "38",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "165",
+        "decimal_R": "76",
+        "decimal_G": "95",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "166",
+        "decimal_R": "0",
+        "decimal_G": "31",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "167",
+        "decimal_R": "63",
+        "decimal_G": "79",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "168",
+        "decimal_R": "0",
+        "decimal_G": "19",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "169",
+        "decimal_R": "38",
+        "decimal_G": "47",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "170",
+        "decimal_R": "0",
+        "decimal_G": "0",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "171",
+        "decimal_R": "127",
+        "decimal_G": "127",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "172",
+        "decimal_R": "0",
+        "decimal_G": "0",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "173",
+        "decimal_R": "102",
+        "decimal_G": "102",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "174",
+        "decimal_R": "0",
+        "decimal_G": "0",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "175",
+        "decimal_R": "76",
+        "decimal_G": "76",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "176",
+        "decimal_R": "0",
+        "decimal_G": "0",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "177",
+        "decimal_R": "63",
+        "decimal_G": "63",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "178",
+        "decimal_R": "0",
+        "decimal_G": "0",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "179",
+        "decimal_R": "38",
+        "decimal_G": "38",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "180",
+        "decimal_R": "63",
+        "decimal_G": "0",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "181",
+        "decimal_R": "159",
+        "decimal_G": "127",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "182",
+        "decimal_R": "51",
+        "decimal_G": "0",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "183",
+        "decimal_R": "127",
+        "decimal_G": "102",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "184",
+        "decimal_R": "38",
+        "decimal_G": "0",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "185",
+        "decimal_R": "95",
+        "decimal_G": "76",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "186",
+        "decimal_R": "31",
+        "decimal_G": "0",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "187",
+        "decimal_R": "79",
+        "decimal_G": "63",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "188",
+        "decimal_R": "19",
+        "decimal_G": "0",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "189",
+        "decimal_R": "47",
+        "decimal_G": "38",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "190",
+        "decimal_R": "127",
+        "decimal_G": "0",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "191",
+        "decimal_R": "191",
+        "decimal_G": "127",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "192",
+        "decimal_R": "102",
+        "decimal_G": "0",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "193",
+        "decimal_R": "153",
+        "decimal_G": "102",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "194",
+        "decimal_R": "76",
+        "decimal_G": "0",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "195",
+        "decimal_R": "114",
+        "decimal_G": "76",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "196",
+        "decimal_R": "63",
+        "decimal_G": "0",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "197",
+        "decimal_R": "95",
+        "decimal_G": "63",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "198",
+        "decimal_R": "38",
+        "decimal_G": "0",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "199",
+        "decimal_R": "57",
+        "decimal_G": "38",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "200",
+        "decimal_R": "191",
+        "decimal_G": "0",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "201",
+        "decimal_R": "223",
+        "decimal_G": "127",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "202",
+        "decimal_R": "153",
+        "decimal_G": "0",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "203",
+        "decimal_R": "178",
+        "decimal_G": "102",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "204",
+        "decimal_R": "114",
+        "decimal_G": "0",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "205",
+        "decimal_R": "133",
+        "decimal_G": "76",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "206",
+        "decimal_R": "95",
+        "decimal_G": "0",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "207",
+        "decimal_R": "111",
+        "decimal_G": "63",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "208",
+        "decimal_R": "57",
+        "decimal_G": "0",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "209",
+        "decimal_R": "66",
+        "decimal_G": "38",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "210",
+        "decimal_R": "255",
+        "decimal_G": "0",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "211",
+        "decimal_R": "255",
+        "decimal_G": "127",
+        "decimal_B": "255"
+    },
+    {
+        "AciValue": "212",
+        "decimal_R": "204",
+        "decimal_G": "0",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "213",
+        "decimal_R": "204",
+        "decimal_G": "102",
+        "decimal_B": "204"
+    },
+    {
+        "AciValue": "214",
+        "decimal_R": "153",
+        "decimal_G": "0",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "215",
+        "decimal_R": "153",
+        "decimal_G": "76",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "216",
+        "decimal_R": "127",
+        "decimal_G": "0",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "217",
+        "decimal_R": "127",
+        "decimal_G": "63",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "218",
+        "decimal_R": "76",
+        "decimal_G": "0",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "219",
+        "decimal_R": "76",
+        "decimal_G": "38",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "220",
+        "decimal_R": "255",
+        "decimal_G": "0",
+        "decimal_B": "191"
+    },
+    {
+        "AciValue": "221",
+        "decimal_R": "255",
+        "decimal_G": "127",
+        "decimal_B": "223"
+    },
+    {
+        "AciValue": "222",
+        "decimal_R": "204",
+        "decimal_G": "0",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "223",
+        "decimal_R": "204",
+        "decimal_G": "102",
+        "decimal_B": "178"
+    },
+    {
+        "AciValue": "224",
+        "decimal_R": "153",
+        "decimal_G": "0",
+        "decimal_B": "114"
+    },
+    {
+        "AciValue": "225",
+        "decimal_R": "153",
+        "decimal_G": "76",
+        "decimal_B": "133"
+    },
+    {
+        "AciValue": "226",
+        "decimal_R": "127",
+        "decimal_G": "0",
+        "decimal_B": "95"
+    },
+    {
+        "AciValue": "227",
+        "decimal_R": "127",
+        "decimal_G": "63",
+        "decimal_B": "111"
+    },
+    {
+        "AciValue": "228",
+        "decimal_R": "76",
+        "decimal_G": "0",
+        "decimal_B": "57"
+    },
+    {
+        "AciValue": "229",
+        "decimal_R": "76",
+        "decimal_G": "38",
+        "decimal_B": "66"
+    },
+    {
+        "AciValue": "230",
+        "decimal_R": "255",
+        "decimal_G": "0",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "231",
+        "decimal_R": "255",
+        "decimal_G": "127",
+        "decimal_B": "191"
+    },
+    {
+        "AciValue": "232",
+        "decimal_R": "204",
+        "decimal_G": "0",
+        "decimal_B": "102"
+    },
+    {
+        "AciValue": "233",
+        "decimal_R": "204",
+        "decimal_G": "102",
+        "decimal_B": "153"
+    },
+    {
+        "AciValue": "234",
+        "decimal_R": "153",
+        "decimal_G": "0",
+        "decimal_B": "76"
+    },
+    {
+        "AciValue": "235",
+        "decimal_R": "153",
+        "decimal_G": "76",
+        "decimal_B": "114"
+    },
+    {
+        "AciValue": "236",
+        "decimal_R": "127",
+        "decimal_G": "0",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "237",
+        "decimal_R": "127",
+        "decimal_G": "63",
+        "decimal_B": "95"
+    },
+    {
+        "AciValue": "238",
+        "decimal_R": "76",
+        "decimal_G": "0",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "239",
+        "decimal_R": "76",
+        "decimal_G": "38",
+        "decimal_B": "57"
+    },
+    {
+        "AciValue": "240",
+        "decimal_R": "255",
+        "decimal_G": "0",
+        "decimal_B": "63"
+    },
+    {
+        "AciValue": "241",
+        "decimal_R": "255",
+        "decimal_G": "127",
+        "decimal_B": "159"
+    },
+    {
+        "AciValue": "242",
+        "decimal_R": "204",
+        "decimal_G": "0",
+        "decimal_B": "51"
+    },
+    {
+        "AciValue": "243",
+        "decimal_R": "204",
+        "decimal_G": "102",
+        "decimal_B": "127"
+    },
+    {
+        "AciValue": "244",
+        "decimal_R": "153",
+        "decimal_G": "0",
+        "decimal_B": "38"
+    },
+    {
+        "AciValue": "245",
+        "decimal_R": "153",
+        "decimal_G": "76",
+        "decimal_B": "95"
+    },
+    {
+        "AciValue": "246",
+        "decimal_R": "127",
+        "decimal_G": "0",
+        "decimal_B": "31"
+    },
+    {
+        "AciValue": "247",
+        "decimal_R": "127",
+        "decimal_G": "63",
+        "decimal_B": "79"
+    },
+    {
+        "AciValue": "248",
+        "decimal_R": "76",
+        "decimal_G": "0",
+        "decimal_B": "19"
+    },
+    {
+        "AciValue": "249",
+        "decimal_R": "76",
+        "decimal_G": "38",
+        "decimal_B": "47"
+    },
+    {
+        "AciValue": "250",
+        "decimal_R": "51",
+        "decimal_G": "51",
+        "decimal_B": "51"
+    },
+    {
+        "AciValue": "251",
+        "decimal_R": "91",
+        "decimal_G": "91",
+        "decimal_B": "91"
+    },
+    {
+        "AciValue": "252",
+        "decimal_R": "132",
+        "decimal_G": "132",
+        "decimal_B": "132"
+    },
+    {
+        "AciValue": "253",
+        "decimal_R": "173",
+        "decimal_G": "173",
+        "decimal_B": "173"
+    },
+    {
+        "AciValue": "254",
+        "decimal_R": "214",
+        "decimal_G": "214",
+        "decimal_B": "214"
+    },
+    {
+        "AciValue": "255",
+        "decimal_R": "255",
+        "decimal_G": "255",
+        "decimal_B": "255"
+    }
+]

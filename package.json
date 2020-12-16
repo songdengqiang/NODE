@@ -20,6 +20,7 @@
     "axios": "^0.21.0",
     "cheerio": "^1.0.0-rc.3",
     "formidable": "^1.2.2",
+    "iconv-lite": "^0.6.2",
     "multiparty": "^4.2.2",
     "request": "^2.88.2"
   }

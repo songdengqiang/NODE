@@ -7,12 +7,18 @@ const pak = new packages();
 const multiparty = require('multiparty');
 const url = require('url')
 const axios = require('axios')
+let iconv = require('iconv-lite')
 const cheerio = require('cheerio')
 
 /* 用户界面功能 */
 router.use('/kGraph',Kgraph);
 router.get('/getFuncName', function(req, res){
     pak.readJson('imgStyle.json',function(data){
+        res.send(data)
+    })
+})
+router.get('/getColorInfo', function(req, res){
+    pak.readJson('colorJson.json',function(data){
         res.send(data)
     })
 })
@@ -62,23 +68,27 @@ router.post('/postImgData', function(req, res){
         }) 
     })
 })
-router.get('/ceshi', function (req, res) {
-    let httpUrl = 'http://www.5tu.cn/colors/yansebiao.html'
+// 颜色得挖掘
+router.get('/colorW', function (req, res) {
+    let httpUrl = 'https://www.cnblogs.com/windspiral/p/13758420.html'
     let colorList = []
-    axios.get(httpUrl,{}).then(function (ress) {
+    axios.get(httpUrl,{encoding:'binary'}).then(function (ress) {
         let $ = cheerio.load(ress.data)
-        $('.tableborder>tr').each((i, element) => {
-            console.log($(element).find('td').)
-            // // if (colorTitle !== undefined) {
-            // //     let lists = colorTitle.split(',')
-            // //     colorJson.RGB = lists[0]
-            // //     colorJson.name = lists[1]
-            // //     colorList.push(colorJson)
-            // // }
-        })
-        
         // console.log($)
-        res.send(colorList)
+        let info = $('#cnblogs_post_body').find('p').eq(2).html()
+        let infoList = info.split('<br>')
+        for(let i=0;i<infoList.length;i++){
+            let colorJson = {}
+            let List = infoList[i].split(' ')
+            colorJson.AciValue = List[0]
+            colorJson.decimal_R = List[1]
+            colorJson.decimal_G = List[2]
+            colorJson.decimal_B = List[3]
+            colorList.push(colorJson)
+        }
+        console.log(colorList)
+        pak.writeJson('AutoDeskColorAscall.json', colorList)
+        res.send("数据挖掘成功！")
     })
 })
 

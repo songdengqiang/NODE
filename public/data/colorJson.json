@@ -1,0 +1,566 @@
+[
+    {
+        "RGB": "F0F8FF",
+        "eName": "AliceBlue"
+    },
+    {
+        "RGB": "FAEBD7",
+        "eName": "AntiqueWhite"
+    },
+    {
+        "RGB": "00FFFF",
+        "eName": "Aqua"
+    },
+    {
+        "RGB": "7FFFD4",
+        "eName": "Aquamarine"
+    },
+    {
+        "RGB": "F0FFFF",
+        "eName": "Azure"
+    },
+    {
+        "RGB": "F5F5DC",
+        "eName": "Beige"
+    },
+    {
+        "RGB": "FFE4C4",
+        "eName": "Bisque"
+    },
+    {
+        "RGB": "000000",
+        "eName": "Black"
+    },
+    {
+        "RGB": "FFEBCD",
+        "eName": "BlanchedAlmond"
+    },
+    {
+        "RGB": "0000FF",
+        "eName": "Blue"
+    },
+    {
+        "RGB": "8A2BE2",
+        "eName": "BlueViolet"
+    },
+    {
+        "RGB": "A52A2A",
+        "eName": "Brown"
+    },
+    {
+        "RGB": "DEB887",
+        "eName": "BurlyWood"
+    },
+    {
+        "RGB": "5F9EA0",
+        "eName": "CadetBlue"
+    },
+    {
+        "RGB": "7FFF00",
+        "eName": "Chartreuse"
+    },
+    {
+        "RGB": "D2691E",
+        "eName": "Chocolate"
+    },
+    {
+        "RGB": "FF7F50",
+        "eName": "Coral"
+    },
+    {
+        "RGB": "6495ED",
+        "eName": "CornflowerBlue"
+    },
+    {
+        "RGB": "FFF8DC",
+        "eName": "Cornsilk"
+    },
+    {
+        "RGB": "DC143C",
+        "eName": "Crimson"
+    },
+    {
+        "RGB": "00FFFF",
+        "eName": "Cyan"
+    },
+    {
+        "RGB": "00008B",
+        "eName": "DarkBlue"
+    },
+    {
+        "RGB": "008B8B",
+        "eName": "DarkCyan"
+    },
+    {
+        "RGB": "B8860B",
+        "eName": "DarkGoldenrod"
+    },
+    {
+        "RGB": "A9A9A9",
+        "eName": "DarkGray"
+    },
+    {
+        "RGB": "006400",
+        "eName": "DarkGreen"
+    },
+    {
+        "RGB": "BDB76B",
+        "eName": "DarkKhaki"
+    },
+    {
+        "RGB": "8B008B",
+        "eName": "DarkMagenta"
+    },
+    {
+        "RGB": "556B2F",
+        "eName": "DarkOliveGreen"
+    },
+    {
+        "RGB": "FF8C00",
+        "eName": "DarkOrange"
+    },
+    {
+        "RGB": "9932CC",
+        "eName": "DarkOrchid"
+    },
+    {
+        "RGB": "8B0000",
+        "eName": "DarkRed"
+    },
+    {
+        "RGB": "E9967A",
+        "eName": "DarkSalmon"
+    },
+    {
+        "RGB": "8FBC8B",
+        "eName": "DarkSeaGreen"
+    },
+    {
+        "RGB": "483D8B",
+        "eName": "DarkSlateBlue"
+    },
+    {
+        "RGB": "2F4F4F",
+        "eName": "DarkSlateGray"
+    },
+    {
+        "RGB": "00CED1",
+        "eName": "DarkTurquoise"
+    },
+    {
+        "RGB": "9400D3",
+        "eName": "DarkViolet"
+    },
+    {
+        "RGB": "FF1493",
+        "eName": "DeepPink"
+    },
+    {
+        "RGB": "00BFFF",
+        "eName": "DeepSkyBlue"
+    },
+    {
+        "RGB": "696969",
+        "eName": "DimGray"
+    },
+    {
+        "RGB": "1E90FF",
+        "eName": "DodgerBlue"
+    },
+    {
+        "RGB": "B22222",
+        "eName": "Firebrick"
+    },
+    {
+        "RGB": "FFFAF0",
+        "eName": "FloralWhite"
+    },
+    {
+        "RGB": "228B22",
+        "eName": "ForestGreen"
+    },
+    {
+        "RGB": "FF00FF",
+        "eName": "Fuchsia"
+    },
+    {
+        "RGB": "DCDCDC",
+        "eName": "Gainsboro"
+    },
+    {
+        "RGB": "F8F8FF",
+        "eName": "GhostWhite"
+    },
+    {
+        "RGB": "FFD700",
+        "eName": "Gold"
+    },
+    {
+        "RGB": "DAA520",
+        "eName": "Goldenrod"
+    },
+    {
+        "RGB": "808080",
+        "eName": "Gray"
+    },
+    {
+        "RGB": "008000",
+        "eName": "Green"
+    },
+    {
+        "RGB": "ADFF2F",
+        "eName": "GreenYellow"
+    },
+    {
+        "RGB": "F0FFF0",
+        "eName": "Honeydew"
+    },
+    {
+        "RGB": "FF69B4",
+        "eName": "HotPink"
+    },
+    {
+        "RGB": "CD5C5C",
+        "eName": "IndianRed"
+    },
+    {
+        "RGB": "4B0082",
+        "eName": "Indigo"
+    },
+    {
+        "RGB": "FFFFF0",
+        "eName": "Ivory"
+    },
+    {
+        "RGB": "F0E68C",
+        "eName": "Khaki"
+    },
+    {
+        "RGB": "E6E6FA",
+        "eName": "Lavender"
+    },
+    {
+        "RGB": "FFF0F5",
+        "eName": "LavenderBlush"
+    },
+    {
+        "RGB": "7CFC00",
+        "eName": "LawnGreen"
+    },
+    {
+        "RGB": "FFFACD",
+        "eName": "LemonChiffon"
+    },
+    {
+        "RGB": "ADD8E6",
+        "eName": "LightBlue"
+    },
+    {
+        "RGB": "F08080",
+        "eName": "LightCoral"
+    },
+    {
+        "RGB": "E0FFFF",
+        "eName": "LightCyan"
+    },
+    {
+        "RGB": "FAFAD2",
+        "eName": "LightGoldenrodYellow"
+    },
+    {
+        "RGB": "D3D3D3",
+        "eName": "LightGray"
+    },
+    {
+        "RGB": "90EE90",
+        "eName": "LightGreen"
+    },
+    {
+        "RGB": "FFB6C1",
+        "eName": "LightPink"
+    },
+    {
+        "RGB": "FFA07A",
+        "eName": "LightSalmon"
+    },
+    {
+        "RGB": "20B2AA",
+        "eName": "LightSeaGreen"
+    },
+    {
+        "RGB": "87CEFA",
+        "eName": "LightSkyBlue"
+    },
+    {
+        "RGB": "778899",
+        "eName": "LightSlateGray"
+    },
+    {
+        "RGB": "B0C4DE",
+        "eName": "LightSteelBlue"
+    },
+    {
+        "RGB": "FFFFE0",
+        "eName": "LightYellow"
+    },
+    {
+        "RGB": "00FF00",
+        "eName": "Lime"
+    },
+    {
+        "RGB": "32CD32",
+        "eName": "LimeGreen"
+    },
+    {
+        "RGB": "FAF0E6",
+        "eName": "Linen"
+    },
+    {
+        "RGB": "FF00FF",
+        "eName": "Magenta"
+    },
+    {
+        "RGB": "800000",
+        "eName": "Maroon"
+    },
+    {
+        "RGB": "66CDAA",
+        "eName": "MediumAquamarine"
+    },
+    {
+        "RGB": "0000CD",
+        "eName": "MediumBlue"
+    },
+    {
+        "RGB": "BA55D3",
+        "eName": "MediumOrchid"
+    },
+    {
+        "RGB": "9370DB",
+        "eName": "MediumPurple"
+    },
+    {
+        "RGB": "3CB371",
+        "eName": "MediumSeaGreen"
+    },
+    {
+        "RGB": "7B68EE",
+        "eName": "MediumSlateBlue"
+    },
+    {
+        "RGB": "00FA9A",
+        "eName": "MediumSpringGreen"
+    },
+    {
+        "RGB": "48D1CC",
+        "eName": "MediumTurquoise"
+    },
+    {
+        "RGB": "C71585",
+        "eName": "MediumVioletRed"
+    },
+    {
+        "RGB": "191970",
+        "eName": "MidnightBlue"
+    },
+    {
+        "RGB": "F5FFFA",
+        "eName": "MintCream"
+    },
+    {
+        "RGB": "FFE4E1",
+        "eName": "MistyRose"
+    },
+    {
+        "RGB": "FFE4B5",
+        "eName": "Moccasin"
+    },
+    {
+        "RGB": "FFDEAD",
+        "eName": "NavajoWhite"
+    },
+    {
+        "RGB": "000080",
+        "eName": "Navy"
+    },
+    {
+        "RGB": "FDF5E6",
+        "eName": "OldLace"
+    },
+    {
+        "RGB": "808000",
+        "eName": "Olive"
+    },
+    {
+        "RGB": "6B8E23",
+        "eName": "OliveDrab"
+    },
+    {
+        "RGB": "FFA500",
+        "eName": "Orange"
+    },
+    {
+        "RGB": "FF4500",
+        "eName": "OrangeRed"
+    },
+    {
+        "RGB": "DA70D6",
+        "eName": "Orchid"
+    },
+    {
+        "RGB": "EEE8AA",
+        "eName": "PaleGoldenrod"
+    },
+    {
+        "RGB": "98FB98",
+        "eName": "PaleGreen"
+    },
+    {
+        "RGB": "AFEEEE",
+        "eName": "PaleTurquoise"
+    },
+    {
+        "RGB": "DB7093",
+        "eName": "PaleVioletRed"
+    },
+    {
+        "RGB": "FFEFD5",
+        "eName": "PapayaWhip"
+    },
+    {
+        "RGB": "FFDAB9",
+        "eName": "PeachPuff"
+    },
+    {
+        "RGB": "CD853F",
+        "eName": "Peru"
+    },
+    {
+        "RGB": "FFC0CB",
+        "eName": "Pink"
+    },
+    {
+        "RGB": "DDA0DD",
+        "eName": "Plum"
+    },
+    {
+        "RGB": "B0E0E6",
+        "eName": "PowderBlue"
+    },
+    {
+        "RGB": "800080",
+        "eName": "Purple"
+    },
+    {
+        "RGB": "FF0000",
+        "eName": "Red"
+    },
+    {
+        "RGB": "BC8F8F",
+        "eName": "RosyBrown"
+    },
+    {
+        "RGB": "4169E1",
+        "eName": "RoyalBlue"
+    },
+    {
+        "RGB": "8B4513",
+        "eName": "SaddleBrown"
+    },
+    {
+        "RGB": "FA8072",
+        "eName": "Salmon"
+    },
+    {
+        "RGB": "F4A460",
+        "eName": "SandyBrown"
+    },
+    {
+        "RGB": "2E8B57",
+        "eName": "SeaGreen"
+    },
+    {
+        "RGB": "FFF5EE",
+        "eName": "SeaShell"
+    },
+    {
+        "RGB": "A0522D",
+        "eName": "Sienna"
+    },
+    {
+        "RGB": "C0C0C0",
+        "eName": "Silver"
+    },
+    {
+        "RGB": "87CEEB",
+        "eName": "SkyBlue"
+    },
+    {
+        "RGB": "6A5ACD",
+        "eName": "SlateBlue"
+    },
+    {
+        "RGB": "708090",
+        "eName": "SlateGray"
+    },
+    {
+        "RGB": "FFFAFA",
+        "eName": "Snow"
+    },
+    {
+        "RGB": "00FF7F",
+        "eName": "SpringGreen"
+    },
+    {
+        "RGB": "4682B4",
+        "eName": "SteelBlue"
+    },
+    {
+        "RGB": "D2B48C",
+        "eName": "Tan"
+    },
+    {
+        "RGB": "008080",
+        "eName": "Teal"
+    },
+    {
+        "RGB": "D8BFD8",
+        "eName": "Thistle"
+    },
+    {
+        "RGB": "FF6347",
+        "eName": "Tomato"
+    },
+    {
+        "RGB": "FFFFFF",
+        "eName": "Transparent"
+    },
+    {
+        "RGB": "40E0D0",
+        "eName": "Turquoise"
+    },
+    {
+        "RGB": "EE82EE",
+        "eName": "Violet"
+    },
+    {
+        "RGB": "F5DEB3",
+        "eName": "Wheat"
+    },
+    {
+        "RGB": "FFFFFF",
+        "eName": "White"
+    },
+    {
+        "RGB": "F5F5F5",
+        "eName": "WhiteSmoke"
+    },
+    {
+        "RGB": "FFFF00",
+        "eName": "Yellow"
+    },
+    {
+        "RGB": "9ACD32",
+        "eName": "YellowGreen"
+    }
+]
