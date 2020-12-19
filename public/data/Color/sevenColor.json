@@ -1,0 +1,51 @@
+[
+    {
+        "name": "红色(red)",
+        "decimal_R": "255",
+        "decimal_G": "0",
+        "decimal_B": "0",
+        "hexadecimal": "FF0000"
+    },
+    {
+        "name": "橙色(orange)",
+        "decimal_R": "255",
+        "decimal_G": "165",
+        "decimal_B": "0",
+        "hexadecimal": "FFA500"
+    },
+    {
+        "name": "黄色(yellow)",
+        "decimal_R": "255",
+        "decimal_G": "255",
+        "decimal_B": "0",
+        "hexadecimal": "FFFF00"
+    },
+    {
+        "name": "绿色(green)",
+        "decimal_R": "0",
+        "decimal_G": "255",
+        "decimal_B": "0",
+        "hexadecimal": "00FF00"
+    },
+    {
+        "name": "青色(cyan)",
+        "decimal_R": "0",
+        "decimal_G": "127",
+        "decimal_B": "255",
+        "hexadecimal": "007FFF"
+    },
+    {
+        "name": "蓝色(blue)",
+        "decimal_R": "0",
+        "decimal_G": "0",
+        "decimal_B": "255",
+        "hexadecimal": "0000FF"
+    },
+    {
+        "name": "紫色(violet)",
+        "decimal_R": "139",
+        "decimal_G": "0",
+        "decimal_B": "255",
+        "hexadecimal": "8B00FF"
+    }
+]

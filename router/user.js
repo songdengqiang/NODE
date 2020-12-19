@@ -18,7 +18,17 @@ router.get('/getFuncName', function(req, res){
     })
 })
 router.get('/getColorInfo', function(req, res){
-    pak.readJson('colorJson.json',function(data){
+    pak.readJson('Color/colorJson.json',function(data){
+        res.send(data)
+    })
+})
+router.get('/getColorInfo1', function(req, res){
+    pak.readJson('Color/AutoDeskColorAscall.json',function(data){
+        res.send(data)
+    })
+})
+router.get('/getSevenColor', function(req, res){
+    pak.readJson('Color/sevenColor.json',function(data){
         res.send(data)
     })
 })
@@ -70,12 +80,14 @@ router.post('/postImgData', function(req, res){
 })
 // 颜色得挖掘
 router.get('/colorW', function (req, res) {
-    let httpUrl = 'https://www.cnblogs.com/windspiral/p/13758420.html'
+    let httpUrl = 'http://www.5tu.cn/colors/rgb-peisebiao.html'
     let colorList = []
     axios.get(httpUrl,{encoding:'binary'}).then(function (ress) {
         let $ = cheerio.load(ress.data)
         // console.log($)
-        let info = $('#cnblogs_post_body').find('p').eq(2).html()
+        let info = $('tbody tr').each((i,element)=> {
+            
+        })
         let infoList = info.split('<br>')
         for(let i=0;i<infoList.length;i++){
             let colorJson = {}

@@ -3,181 +3,211 @@
         "AciValue": "1",
         "decimal_R": "255",
         "decimal_G": "0",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#FF0000"
     },
     {
         "AciValue": "2",
         "decimal_R": "255",
         "decimal_G": "255",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#FFFF00"
     },
     {
         "AciValue": "3",
         "decimal_R": "0",
         "decimal_G": "255",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#00FF00"
     },
     {
         "AciValue": "4",
         "decimal_R": "0",
         "decimal_G": "255",
-        "decimal_B": "255"
+        "decimal_B": "255",
+        "hexadecimal": "#00FFFF"
     },
     {
         "AciValue": "5",
         "decimal_R": "0",
         "decimal_G": "0",
-        "decimal_B": "255"
+        "decimal_B": "255",
+        "hexadecimal": "#FFFF00"
     },
     {
         "AciValue": "6",
         "decimal_R": "255",
         "decimal_G": "0",
-        "decimal_B": "255"
+        "decimal_B": "255",
+        "hexadecimal": "#FF00FF"
     },
     {
         "AciValue": "7",
         "decimal_R": "0",
         "decimal_G": "0",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#FFFFFF"
     },
     {
         "AciValue": "8",
         "decimal_R": "128",
         "decimal_G": "128",
-        "decimal_B": "128"
+        "decimal_B": "128",
+        "hexadecimal": "#414141"
     },
     {
         "AciValue": "9",
         "decimal_R": "192",
         "decimal_G": "192",
-        "decimal_B": "192"
+        "decimal_B": "192",
+        "hexadecimal": "#808080"
     },
     {
         "AciValue": "10",
         "decimal_R": "255",
         "decimal_G": "0",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#FF0000"
     },
     {
         "AciValue": "11",
         "decimal_R": "255",
         "decimal_G": "127",
-        "decimal_B": "127"
+        "decimal_B": "127",
+        "hexadecimal": "#FFAAAA"
     },
     {
         "AciValue": "12",
         "decimal_R": "204",
         "decimal_G": "0",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#BD0000"
     },
     {
         "AciValue": "13",
         "decimal_R": "204",
         "decimal_G": "102",
-        "decimal_B": "102"
+        "decimal_B": "102",
+        "hexadecimal": "#BD7E7E"
     },
     {
         "AciValue": "14",
         "decimal_R": "153",
         "decimal_G": "0",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#810000"
     },
     {
         "AciValue": "15",
         "decimal_R": "153",
         "decimal_G": "76",
-        "decimal_B": "76"
+        "decimal_B": "76",
+        "hexadecimal": "#815656"
     },
     {
         "AciValue": "16",
         "decimal_R": "127",
         "decimal_G": "0",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#680000"
     },
     {
         "AciValue": "17",
         "decimal_R": "127",
         "decimal_G": "63",
-        "decimal_B": "63"
+        "decimal_B": "63",
+        "hexadecimal": "#684545"
     },
     {
         "AciValue": "18",
         "decimal_R": "76",
         "decimal_G": "0",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#4F0000"
     },
     {
         "AciValue": "19",
         "decimal_R": "76",
         "decimal_G": "38",
-        "decimal_B": "38"
+        "decimal_B": "38",
+        "hexadecimal": "#4F3535"
     },
     {
         "AciValue": "20",
         "decimal_R": "255",
         "decimal_G": "63",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#FF3F00"
     },
     {
         "AciValue": "21",
         "decimal_R": "255",
         "decimal_G": "159",
-        "decimal_B": "127"
+        "decimal_B": "127",
+        "hexadecimal": "#FFBFAA"
     },
     {
         "AciValue": "22",
         "decimal_R": "204",
         "decimal_G": "51",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#BD2E00"
     },
     {
         "AciValue": "23",
         "decimal_R": "204",
         "decimal_G": "127",
-        "decimal_B": "102"
+        "decimal_B": "102",
+        "hexadecimal": "#BD8D7E"
     },
     {
         "AciValue": "24",
         "decimal_R": "153",
         "decimal_G": "38",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#811F00"
     },
     {
         "AciValue": "25",
         "decimal_R": "153",
         "decimal_G": "95",
-        "decimal_B": "76"
+        "decimal_B": "76",
+        "hexadecimal": "#816056"
     },
     {
         "AciValue": "26",
         "decimal_R": "127",
         "decimal_G": "31",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#681900"
     },
     {
         "AciValue": "27",
         "decimal_R": "127",
         "decimal_G": "79",
-        "decimal_B": "63"
+        "decimal_B": "63",
+        "hexadecimal": "#684E45"
     },
     {
         "AciValue": "28",
         "decimal_R": "76",
         "decimal_G": "19",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#4F1300"
     },
     {
         "AciValue": "29",
         "decimal_R": "76",
         "decimal_G": "47",
-        "decimal_B": "38"
+        "decimal_B": "38",
+        "hexadecimal": "#4F3B35"
     },
     {
         "AciValue": "30",
         "decimal_R": "255",
         "decimal_G": "127",
-        "decimal_B": "0"
+        "decimal_B": "0",
+        "hexadecimal": "#FF7F00"
     },
     {
         "AciValue": "31",
