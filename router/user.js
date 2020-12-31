@@ -103,5 +103,20 @@ router.get('/colorW', function (req, res) {
         res.send("数据挖掘成功！")
     })
 })
+//天气数据的挖掘
+router.get('/weathers', function (req, res) {
+    let httpUrl = 'https://tianqiapi.com/api.php?style=tq&skin=pitaya'
+    let weather = {}
+    axios.get(httpUrl).then(function (ress) {
+        let $ = cheerio.load(ress.data)
+        console.log($)
+        let info = $('body').text()
+        let weatherList = info.split(' ')
+        weather.descript = weatherList[2]
+        weather.temperature = weatherList[4]
+        weather.wind = weatherList[5]
+        res.send(weather)
+    })
+})
 
 module.exports = router;
