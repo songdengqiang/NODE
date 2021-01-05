@@ -9,9 +9,13 @@ const url = require('url')
 const axios = require('axios')
 let iconv = require('iconv-lite')
 const cheerio = require('cheerio')
+const plans = require('./User/plan');
 
 /* 用户界面功能 */
 router.use('/kGraph',Kgraph);
+router.use('/plan',plans)
+
+
 router.get('/getFuncName', function(req, res){
     pak.readJson('imgStyle.json',function(data){
         res.send(data)
@@ -98,7 +102,7 @@ router.get('/colorW', function (req, res) {
             colorJson.decimal_B = List[3]
             colorList.push(colorJson)
         }
-        console.log(colorList)
+        // console.log(colorList)
         pak.writeJson('AutoDeskColorAscall.json', colorList)
         res.send("数据挖掘成功！")
     })
@@ -109,7 +113,7 @@ router.get('/weathers', function (req, res) {
     let weather = {}
     axios.get(httpUrl).then(function (ress) {
         let $ = cheerio.load(ress.data)
-        console.log($)
+        // console.log($)
         let info = $('body').text()
         let weatherList = info.split(' ')
         weather.descript = weatherList[2]

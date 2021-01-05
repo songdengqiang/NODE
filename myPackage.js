@@ -243,7 +243,19 @@ module.exports = function () {
             callback(jsonData)
         })
     }
-    this.writeJson = function (fileName,heros) {
-        fs.writeFileSync('./public/data/'+fileName, JSON.stringify(heros))
+    this.writeJson = function (fileName,heros,callback) {
+        fs.writeFile('./public/data/'+fileName, JSON.stringify(heros),function(err,data){
+            callback('成功')
+        })
+    }
+    this.addJson = function (fileName,heros,callback) {
+        fs.readFile('./public/data/'+fileName,function(err,date){
+            const jsonData = JSON.parse(date)
+            jsonData.push(heros)
+            fs.writeFileSync('./public/data/'+fileName, JSON.stringify(jsonData),function(err,data){
+                console.log(err)
+            })
+        })
+        
     }
 };
