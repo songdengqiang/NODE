@@ -30,15 +30,21 @@ router.post('/add_today_plan',function(req,res){
     })
 })
 //写入完成的任务数据
-router.post('/add_today_plan',function(req,res){
-    MP.writeJson('plan/today_plan.json',req.body,(ress)=>{
+router.post('/result_today',function(req,res){
+    // console.log(req.body)
+    MP.addJson('plan/result_today.json',req.body,(ress)=>{
         res.send(ress)
     })
 })
 router.post('/add_finish_plan',function(req,res){
-    console.log(req.body)
+    // console.log(req.body)
     MP.addJson('plan/all_finish_plan.json',req.body,(ress)=>{
         res.send(ress)
+    })
+})
+router.get('/get_result_today',function(req,res){
+    MP.readJson('plan/result_today.json',function(data){
+        res.send(data)
     })
 })
 module.exports = router;
