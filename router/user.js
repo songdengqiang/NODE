@@ -10,10 +10,12 @@ const axios = require('axios')
 let iconv = require('iconv-lite')
 const cheerio = require('cheerio')
 const plans = require('./User/plan');
+const project = require('./User/project/projectRouter')
 
 /* 用户界面功能 */
 router.use('/kGraph',Kgraph);
 router.use('/plan',plans)
+router.use('/project',project)
 
 
 router.get('/getFuncName', function(req, res){
