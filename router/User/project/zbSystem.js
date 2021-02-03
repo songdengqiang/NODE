@@ -2,18 +2,15 @@ const express = require('express');
 const router = express.Router();
 const packages = require('../../../myPackage');
 const neo4j = require('neo4j-driver');
+const {
+    exec
+} = require('child_process')
 const MP = new packages();
+const {
+    PythonShell
+} = require('python-shell');
 const multiparty = require('multiparty');
-var PDFImage = require("pdf-image").PDFImage;
 const neo4JCon = require('../../../public/mypackage/connectNeo4j')
-const options = {
-    density: 100,
-    saveFilename: "untitled",
-    savePath: "./public/pythonF/fileData",
-    format: "png",
-    width: 600,
-    height: 600
-};
 /* 用户界面功能 */
 router.get('/ceshi', function (req, res) {
     res.send('成功!')
@@ -159,7 +156,7 @@ router.post('/addMangKg2', function (req, res) {
 // tabular页面的相关路由
 router.post('/pdfsubmit', function (req, res) {
     let form = new multiparty.Form({
-        uploadDir: './public/pythonF/fileData'
+        uploadDir: './router/User/project/zb_python/fileData'
     })
     form.parse(req, (err, fields, files) => {
         if (err) {
@@ -171,14 +168,64 @@ router.post('/pdfsubmit', function (req, res) {
 });
 router.post('/pdfDeal', function (req, res) {
     let path = req.body.path.split('\\')
-    // let imagePath = './public/pythonF/table-detect-master/test_in'
-    let filePath = path[0]
-    for (let i = 1; i < path.length; i++) {
-        filePath = filePath + `/${path[i]}`
-    }
-    console.log(filePath)
-    res.send('成功')
-
+    //调用ImageMagick实现pdf文件转化为png
+    exec(`magick -density 300 -define pdf:use-cropbox=true ./router/User/project/zb_python/fileData/${path[path.length-1]} ./public/zb_pythonF/table-detect-master/test_in/ceshi.png`, (err, stdout, stderr) => {
+        if (err === null) {
+            res.send({
+                title: '成功',
+                data: [{
+                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-0.png'
+                    },
+                    {
+                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-1.png'
+                    },
+                    {
+                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-2.png'
+                    },
+                    {
+                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-3.png'
+                    },
+                    {
+                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-4.png'
+                    }
+                ]
+            })
+        } else {
+            // res.send(err)
+        }
+    })
 })
 
+router.get('/pdfExtract', function (req, res) {
+    // console.log('dfsd')
+    let options = {
+        mode: 'test',
+        pythonOptions: ['-u'], // get print results in real-time
+        args: ['value1', 'value2', 'value3']
+    };
+    let pro_dirP = process.cwd()
+    // console.log('起始目录：' + process.cwd());
+    try {
+        process.chdir('./public/zb_pythonF/table-detect-master'); //切换进程的文件目录
+        // console.log('新目录：' + process.cwd());
+        PythonShell.run('table_detect.py', options, function (err, results) {
+            if (err) throw err;
+            // results is an array consisting of messages collected during execution
+            MP.searchFile('./imgcut',function(data){
+                let objList = []
+                for(let i of data){
+                    let obj = {}
+                    obj.path = `http://192.168.31.126:8888/zb_pythonF/table-detect-master/imgcut/${i}`
+                    objList.push(obj)
+                }
+                res.send({title:'成功',data:objList})
+                process.chdir(pro_dirP)
+            })
+        });
+    } catch(错误) {
+        console.log('chdir：' + err);
+    }
+   
+    // res.send('dd')
+})
 module.exports = router;

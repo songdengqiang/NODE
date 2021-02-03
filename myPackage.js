@@ -2,6 +2,7 @@ const os = require('os');
 const dns = require('dns');
 const XmlParser = require('xmljs');
 const fs = require('fs');
+var path = require("path");
 
 module.exports = function () {
     //文档的帮助文档,可以概括解释包中所带有的函数
@@ -59,203 +60,25 @@ module.exports = function () {
             var nodes = xmlNode.path(fatherArray, true);
             callback(nodes);
         });
-    };
+    }; //读取xml文件
+    this.searchFile = function(pathName,callback){
+        fs.readdir(pathName, function(err, files){
+            var dirs = [];
+            (function iterator(i){
+              if(i == files.length) {
+                // console.log(dirs);
+                callback(dirs)
+                return ;
+              }
+              fs.stat(path.join(pathName, files[i]), function(err, data){     
+                if(data.isFile()){               
+                    dirs.push(files[i]);
+                }
+                iterator(i+1);
+               });   
+            })(0);
+        });
+    }//获取文件夹下的所有文件名和路径
 
-    this.match_label = function (session,callback) {
-        session
-            .run('match (n) return distinct labels(n)')
-            .then(function (result) {
-                const lists = [];
-                result.records.forEach(function (record){
-                    lists.push(record._fields[0][0])
-                })
-                callback(lists)
-            })
-            .catch(function (err) {
-                console.log(err)
-            })
-            .then(function () {
-                session.close()
-            });
-    }; // 查询所有的单一标签
-    this.match_entity = function (session,callback) {
-        session
-            .run('match (n) return n')
-            .then(function (result) {
-                const lists = [];
-                result.records.forEach(function (record){
-                    lists.push(record._fields[0].properties.name)
-                })
-                callback(lists)
-            })
-            .catch(function (err) {
-                console.log(err)
-            })
-            .then(function () {
-                session.close()
-            });
-    }; // 查询所有的实体
-    this.match_relation = function (session,callback) {
-        session
-            .run('MATCH (n) OPTIONAL MATCH (n)-[r]-() return r')
-            .then(result => {
-                var a = [];
-                result.records.forEach(record => {
-            // console.log(record._fields);
-            const data = {};  //关系数据结构的生成
-                    if (record._fields[0] !== null){
-                        data.source = record._fields[0].start.low;
-                        data.target = record._fields[0].end.low;
-                        data.relation = record._fields[0].type;
-                        data.value = 1;
-                        // console.log(data);
-                        var repead = false;
-                        for (let i=0;i<a.length;i++){
-                            if (a[i].source === data.source && a[i].target === data.target){
-                                repead = true;
-                                break;
-                            }
-                        }
-                        if (!repead){
-                            a.push(data)
-                        }
-                    }
-                });
-                callback(a)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-            .then(() => session.close());
-    };// 查询所有的关系
-    this.match_Kgnet = function (session,callback) {
-        session
-            .run('match(n) OPTIONAL MATCH (n)-[r]-() return n,r')
-            .then(function (result) {
-                const panduan ={};
-                const a = []; // 实体集合
-                const b = []; // 关系集合
-                result.records.forEach(function (record){
-                    const data = {};  //实体节点结构的生成
-                    const data1 = {};  //关系节点结构的生成
-                    data.id = record._fields[0].identity.low;
-                    data.label = record._fields[0].labels[0];
-                    data.attribute = record._fields[0].properties;
-                    if (!panduan[data.id]){
-                        a.push(data)
-                        panduan[data.id] = true
-                    }
-                    if (record._fields[1] !== null){
-                        data1.source = record._fields[1].start.low;
-                        data1.target = record._fields[1].end.low;
-                        data1.relation = record._fields[1].type;
-                        // console.log(data);
-                        var repead = false;
-                        for (let i=0;i<b.length;i++){
-                            if (b[i].source === data1.source && b[i].target === data1.target){
-                                repead = true;
-                                break;
-                            }
-                        }
-                        if (!repead){
-                            b.push(data1)
-                        }
-                    }
-                })
-                callback([a,b])
-            })
-            .catch(function (err) {
-                console.log(err)
-            })
-            .then(function () {
-                session.close()
-            });
-    };// 查询知识网络 实体和关系
-    this.create_entity = function (session,data,callback) {
-        session
-            .run('create(n:' + data.label + '{ name:"'+ data.name.toString() +'"}) return n')
-            .then(result => {
-            callback(result);
-        })
-        .catch(error => {
-            console.log(error)
-        })
-        .then(() => session.close());
-    }; // 创建实体
-    this.delete_entity = function (session,data,callback) {
-        session
-            .run('match(n:' + data.label + '{ name:"'+ data.name.toString() +'"}) optional match(n)-[r]-() delete n,r')
-            .then(function(result){
-                callback(result);
-            })
-            .catch(function (err) {
-                console.log(err)
-            })
-            .then(() => session.close());
-        }; // 删除实体
-    this.create_relation = function (session,data,callback) {
-        session
-            .run('match(a) where a.name="'+data.source+'" match(b) where b.name="'+data.target+'" create (a)-[r:'+data.relation+']->(b) return r')
-            .then(result => {
-                callback(result)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-            .then(() => session.close());
-    };// 创建关系
-    this.delete_relation = function (session,data,callback) {
-        session
-            .run('match(a) where a.name="'+data.source+'" match(b) where b.name="'+data.target+'" match (a)-[r:'+data.relation+']->(b) delete r ')
-            .then(result => {
-            callback(result)
-        })
-    .catch(error => {
-            console.log(error)
-    })
-    .then(() => session.close());
-    } // 删除关系
-    this.create_attribute = function (session,data,callback) {
-        session
-            .run('match(n) where n.name=\''+ data.entity.toString() + '\' set n.' + data.attrName.toString() +'=\''+ data.attrValue.toString() + '\' return n')
-            .then(result => {
-           callback(result)
-         })
-        .catch(error => {
-            console.log(error)
-         })
-        .then(() => session.close());
-    } // 创建实体属性
-    this.delete_attribute = function (session,data,callback) {
-        session
-            .run('match(n) where n.name=\''+ data.entity.toString() + '\' remove n.' + data.attrName.toString() + ' return n')
-            .then(result => {
-            callback(result)
-        })
-    .catch(error => {
-            console.log(error)
-    })
-    .then(() => session.close());
-    } // 删除实体属性
-    this.readJson = function (fileName,callback) {
-        fs.readFile('./public/data/'+fileName,function(err,date){
-            const jsonData = JSON.parse(date)
-            callback(jsonData)
-        })
-    }
-    this.writeJson = function (fileName,heros,callback) {
-        fs.writeFile('./public/data/'+fileName, JSON.stringify(heros),function(err,data){
-            callback('成功')
-        })
-    }
-    this.addJson = function (fileName,heros,callback) {
-        fs.readFile('./public/data/'+fileName,function(err,date){
-            const jsonData = JSON.parse(date)
-            jsonData.push(heros)
-            fs.writeFileSync('./public/data/'+fileName, JSON.stringify(jsonData),function(err,data){
-                console.log(err)
-            })
-        })
-        
-    }
+    
 };
