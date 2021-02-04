@@ -2,7 +2,6 @@ const os = require('os');
 const dns = require('dns');
 const XmlParser = require('xmljs');
 const fs = require('fs');
-var path = require("path");
 
 module.exports = function () {
     //文档的帮助文档,可以概括解释包中所带有的函数
@@ -60,7 +59,28 @@ module.exports = function () {
             var nodes = xmlNode.path(fatherArray, true);
             callback(nodes);
         });
-    }; //读取xml文件
+    };
+    this.readJson = function (fileName,callback) {
+        fs.readFile('./public/data/'+fileName,function(err,date){
+            const jsonData = JSON.parse(date)
+            callback(jsonData)
+        })
+    }
+    this.writeJson = function (fileName,heros,callback) {
+        fs.writeFile('./public/data/'+fileName, JSON.stringify(heros),function(err,data){
+            callback('成功')
+        })
+    }
+    this.addJson = function (fileName,heros,callback) {
+        fs.readFile('./public/data/'+fileName,function(err,date){
+            const jsonData = JSON.parse(date)
+            jsonData.push(heros)
+            fs.writeFileSync('./public/data/'+fileName, JSON.stringify(jsonData),function(err,data){
+                console.log(err)
+            })
+        })
+        
+    }
     this.searchFile = function(pathName,callback){
         fs.readdir(pathName, function(err, files){
             var dirs = [];
@@ -79,6 +99,4 @@ module.exports = function () {
             })(0);
         });
     }//获取文件夹下的所有文件名和路径
-
-    
 };
