@@ -2,6 +2,7 @@ const os = require('os');
 const dns = require('dns');
 const XmlParser = require('xmljs');
 const fs = require('fs');
+const path = require('path')
 
 module.exports = function () {
     //文档的帮助文档,可以概括解释包中所带有的函数

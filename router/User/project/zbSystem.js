@@ -171,25 +171,26 @@ router.post('/pdfDeal', function (req, res) {
     //调用ImageMagick实现pdf文件转化为png
     exec(`magick -density 300 -define pdf:use-cropbox=true ./router/User/project/zb_python/fileData/${path[path.length-1]} ./public/zb_pythonF/table-detect-master/test_in/ceshi.png`, (err, stdout, stderr) => {
         if (err === null) {
-            res.send({
-                title: '成功',
-                data: [{
-                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-0.png'
-                    },
-                    {
-                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-1.png'
-                    },
-                    {
-                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-2.png'
-                    },
-                    {
-                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-3.png'
-                    },
-                    {
-                        path: 'http://192.168.31.126:8888/zb_pythonF/table-detect-master/test_in/ceshi-4.png'
+            let pro_dirP = process.cwd()
+            try {
+                process.chdir('./public/zb_pythonF/table-detect-master'); //切换进程的文件目录
+                MP.searchFile('./test_in', function (data) {
+                    let objList = []
+                    for (let i of data) {
+                        let obj = {}
+                        obj.path = `http://10.206.135.180:8888/zb_pythonF/table-detect-master/test_in/${i}`
+                        objList.push(obj)
                     }
-                ]
-            })
+                    res.send({
+                        title: '成功',
+                        data: objList
+                    })
+                    process.chdir(pro_dirP)
+                })
+            } catch (错误) {
+                console.log('chdir：' + err);
+                process.chdir(pro_dirP)
+            }
         } else {
             // res.send(err)
         }
@@ -199,7 +200,7 @@ router.post('/pdfDeal', function (req, res) {
 router.get('/pdfExtract', function (req, res) {
     // console.log('dfsd')
     let options = {
-        mode: 'test',
+        mode: 'text',
         pythonOptions: ['-u'], // get print results in real-time
         args: ['value1', 'value2', 'value3']
     };
@@ -210,22 +211,27 @@ router.get('/pdfExtract', function (req, res) {
         // console.log('新目录：' + process.cwd());
         PythonShell.run('table_detect.py', options, function (err, results) {
             if (err) throw err;
+            console.log(results)
             // results is an array consisting of messages collected during execution
-            MP.searchFile('./imgcut',function(data){
+            MP.searchFile('./imgcut', function (data) {
                 let objList = []
-                for(let i of data){
+                for (let i of data) {
                     let obj = {}
-                    obj.path = `http://192.168.31.126:8888/zb_pythonF/table-detect-master/imgcut/${i}`
+                    obj.path = `http://10.206.135.180:8888/zb_pythonF/table-detect-master/imgcut/${i}`
                     objList.push(obj)
                 }
-                res.send({title:'成功',data:objList})
+                res.send({
+                    title: '成功',
+                    data: objList
+                })
                 process.chdir(pro_dirP)
             })
         });
-    } catch(错误) {
+    } catch (错误) {
         console.log('chdir：' + err);
+        process.chdir(pro_dirP)
     }
-   
+
     // res.send('dd')
 })
 module.exports = router;
