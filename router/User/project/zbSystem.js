@@ -125,7 +125,7 @@ router.post('/addManyKg1', function (req, res) {
         res.send('成功')
     } else {
         let num1 = 0
-        // console.log(req.body)
+        console.log(req.body)
         for (let i of req.body) {
             neo4JCon.addManyKgEntity(i, function (data) {
                 if (data === '成功') {
@@ -141,7 +141,7 @@ router.post('/addMangKg2', function (req, res) {
         res.send('成功')
     } else {
         let num1 = 0
-        // console.log(req.body)
+        console.log(req.body)
         for (let i of req.body) {
             neo4JCon.addOneRelation(i, function (data) {
                 if (data === '成功') {

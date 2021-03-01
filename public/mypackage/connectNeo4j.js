@@ -71,7 +71,7 @@ let addOneEntity = (data, callback) => {
     str = str.substring(0, str.length - 1);
     str = str + '}'
     session
-        .run(`create(n:${data.labels} ${str} ) return n`)
+        .run(`merge(n:${data.labels} ${str} ) return n`)
         .then(result => {
             let entityList = []
             result.records.forEach(record => {
@@ -126,7 +126,7 @@ let addManyKgEntity = (data, callback) => {
     const session = driver.session({
         defaultAccessMode: neo4j.session.READ
     })
-    session.run(`create(n:${data.labels} {name:"${data.name}"}) return n`)
+    session.run(`merge(n:${data.labels} {name:"${data.name}"}) return n`)
         .then(result => {
             callback('成功')
         })
