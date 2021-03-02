@@ -2,7 +2,7 @@ const neo4j = require('neo4j-driver')
 const {
     list
 } = require('pm2')
-const db = 'bolt://localhost' // http://localhost:7474 bolt://localhost:7687
+const db = 'bolt://localhost:11003' // http://localhost:7474 bolt://localhost:7687
 const dbuser = 'Graphs'
 const dbpassword = '123456789'
 // 连接数据库
@@ -24,7 +24,7 @@ let getallentity = (callback) => {
             callback(entityList)
         })
         .catch(error => {
-            callback(error)
+            console.log(error)
         })
         .then(() => session.close())
 }
@@ -42,7 +42,7 @@ let getAllKg = (callback) => {
             callback(entityList)
         })
         .catch(error => {
-            callback(error)
+            console.log(error)
         })
         .then(() => session.close())
 }
@@ -56,7 +56,7 @@ let deleteOneEntity = (data, callback) => {
             callback('成功！')
         })
         .catch(error => {
-            callback(error)
+            console.log(error)
         })
         .then(() => session.close())
 }
@@ -131,7 +131,7 @@ let addManyKgEntity = (data, callback) => {
             callback('成功')
         })
         .catch(error => {
-            callback(error)
+            console.log(error)
         })
         .then(() => session.close())
 }

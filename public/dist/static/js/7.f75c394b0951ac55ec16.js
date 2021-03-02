@@ -1,0 +1,2 @@
+webpackJsonp([7],{jmKW:function(e,t){},oea6:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});n("mtWM");var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"colorGrid"},[this._v("\n   这是电影界面\n")])},staticRenderFns:[]};var a=n("VU/8")({name:"colorGrid"},r,!1,function(e){n("jmKW")},"data-v-668c84e1",null);t.default=a.exports}});
+//# sourceMappingURL=7.f75c394b0951ac55ec16.js.map

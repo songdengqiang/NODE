@@ -124,16 +124,12 @@ router.post('/addManyKg1', function (req, res) {
     if (req.body === []) {
         res.send('成功')
     } else {
-        let num1 = 0
-        console.log(req.body)
-        for (let i of req.body) {
-            neo4JCon.addManyKgEntity(i, function (data) {
-                if (data === '成功') {
-                    num1++
-                }
+        // console.log(req.body)
+        for (let i = 0; i < req.body.length; i++) {
+            neo4JCon.addManyKgEntity(req.body[i], function (data) {
+                res.send('成功')
             })
         }
-        res.send('成功')
     }
 })
 router.post('/addMangKg2', function (req, res) {
@@ -141,7 +137,7 @@ router.post('/addMangKg2', function (req, res) {
         res.send('成功')
     } else {
         let num1 = 0
-        console.log(req.body)
+        // console.log(req.body)
         for (let i of req.body) {
             neo4JCon.addOneRelation(i, function (data) {
                 if (data === '成功') {

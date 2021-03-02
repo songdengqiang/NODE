@@ -1,0 +1,2 @@
+webpackJsonp([11],{Emzz:function(e,t){},PMCB:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});n("mtWM");var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"colorGrid"},[this._v("\n    这是音乐界面\n")])},staticRenderFns:[]};var s=n("VU/8")({name:"musicPage"},r,!1,function(e){n("Emzz")},"data-v-47c44122",null);t.default=s.exports}});
+//# sourceMappingURL=11.3e070a07a3deb604b4b2.js.map
