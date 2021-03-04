@@ -66,6 +66,7 @@ router.get('/getAllKg', function (req, res) {
 router.post('/addEntity', function (req, res) {
     let entityInfo = {}
     let entityAttr = {}
+    console.log(req.body)
     Object.keys(req.body).forEach((key) => {
         if (key === 'labels') {
             entityInfo.labels = req.body[key]
@@ -75,7 +76,7 @@ router.post('/addEntity', function (req, res) {
     })
     entityInfo.attr = entityAttr
     neo4JCon.addOneEntity(entityInfo, function (data) {
-        console.log(data)
+        // console.log(data)
         let entityList = []
         for (let i of data) { //提取数据中记录，并按照模板进行匹配
             let obj = {}
@@ -124,17 +125,17 @@ router.post('/addManyKg1', function (req, res) {
     if (req.body === []) {
         res.send('成功')
     } else {
-        // console.log(req.body)
         for (let i = 0; i < req.body.length; i++) {
             neo4JCon.addManyKgEntity(req.body[i], function (data) {
-                res.send('成功')
+                // console.log(data)
             })
         }
+        res.send('成功')
     }
 })
 router.post('/addMangKg2', function (req, res) {
     if (req.body === []) {
-        res.send('成功')
+        res.send('无关系导入')
     } else {
         let num1 = 0
         // console.log(req.body)
@@ -148,7 +149,57 @@ router.post('/addMangKg2', function (req, res) {
         res.send('成功')
     }
 })
+// 查询知识节点
+router.post('/searchKg1', function (req, res) {
+    if (req.body === '') {
+        res.send('查询失败')
+    } else {
+        // console.log(req.body)
+        neo4JCon.searchKg(req.body, function (data) {
+            // console.log(data)
+            if (data.length > 0) {
+                let entityList = {}
+                entityList.nodes = []
+                entityList.links = []
+                let single = []
+                for (let i of data) { //提取数据中记录，并按照模板进行匹配
+                    let obj = {}
+                    obj.target = i[2].start.low //提取实体的标识
+                    obj.source = i[2].end.low //提取实体的标签
+                    obj.relation = i[2].type
+                    Object.keys(i[2].properties).forEach((key) => { //提取实体的属性
+                        obj[key] = i[2].properties[key]
+                    })
+                    entityList.links.push(obj)
+                    if (single.indexOf(i[0].properties.name) === -1) {
+                        let obj = {}
+                        obj.id = i[0].identity.low //提取实体的标识
+                        obj.labels = i[0].labels //提取实体的标签
+                        Object.keys(i[0].properties).forEach((key) => { //提取实体的属性
+                            obj[key] = i[0].properties[key]
+                        })
+                        entityList.nodes.push(obj)
+                        single.push(i[0].properties.name)
+                    }
+                    if (single.indexOf(i[1].properties.name) === -1) {
+                        let obj = {}
+                        obj.id = i[1].identity.low //提取实体的标识
+                        obj.labels = i[1].labels //提取实体的标签
+                        Object.keys(i[1].properties).forEach((key) => { //提取实体的属性
+                            obj[key] = i[1].properties[key]
+                        })
+                        entityList.nodes.push(obj)
+                        single.push(i[1].properties.name)
+                    }
+                }
+                res.send(entityList)
+            } else {
+                res.send('查询失败！')
+            }
+        })
 
+    }
+})
 // tabular页面的相关路由
 router.post('/pdfsubmit', function (req, res) {
     let form = new multiparty.Form({

@@ -126,7 +126,23 @@ let addManyKgEntity = (data, callback) => {
     const session = driver.session({
         defaultAccessMode: neo4j.session.READ
     })
-    session.run(`merge(n:${data.labels} {name:"${data.name}"}) return n`)
+    let entityInfo = {}
+    let entityAttr = {}
+    Object.keys(data).forEach((key) => {
+        if (key === 'labels') {
+            entityInfo.labels = data[key]
+        } else {
+            entityAttr[key] = data[key]
+        }
+    })
+    entityInfo.attr = entityAttr
+    let str = '{'
+    Object.keys(entityInfo.attr).forEach((key) => {
+        str = `${str} ${key}:"${entityInfo.attr[key]}",`
+    })
+    str = str.substring(0, str.length - 1);
+    str = str + '}'
+    session.run(`merge(n:${entityInfo.labels} ${str} ) return n`)
         .then(result => {
             callback('成功')
         })
@@ -134,6 +150,69 @@ let addManyKgEntity = (data, callback) => {
             console.log(error)
         })
         .then(() => session.close())
+}
+let searchKg = (data,callback) =>{
+    const session = driver.session({
+        defaultAccessMode: neo4j.session.READ
+    })
+    if(data.head !=='' && data.foot !=='' && data.relation !==''){
+        session
+        .run(`match(a) where a.name = "${data.head}" match(b) where b.name = "${data.foot}" match (a)-[r:${data.relation}]->(b) return a,b,r`)
+        .then(result => {
+            let entityList = []
+            result.records.forEach(record => {
+                entityList.push(record._fields)
+            })
+            callback(entityList)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+        .then(() => session.close())
+    }else if(data.head !=='' && data.foot ==='' && data.relation !==''){
+        session
+        .run(`match(a) where a.name = "${data.head}" match (a)-[r:${data.relation}]->(b) return a,b,r`)
+        .then(result => {
+            let entityList = []
+            result.records.forEach(record => {
+                entityList.push(record._fields)
+            })
+            callback(entityList)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+        .then(() => session.close())
+    }else if(data.head ==='' && data.foot ==='' && data.relation !==''){
+        session
+        .run(` match (a)-[r:${data.relation}]->(b) return a,b,r`)
+        .then(result => {
+            let entityList = []
+            result.records.forEach(record => {
+                entityList.push(record._fields)
+            })
+            callback(entityList)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+        .then(() => session.close())
+    }else if(data.head ==='' && data.foot !=='' && data.relation !==''){
+        session
+        .run(`match(a) where a.name = "${data.head}" match (b)-[r:${data.relation}]->(a) return a,b,r`)
+        .then(result => {
+            let entityList = []
+            result.records.forEach(record => {
+                entityList.push(record._fields)
+            })
+            callback(entityList)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+        .then(() => session.close())
+    }
+    
 }
 
 
@@ -145,4 +224,5 @@ module.exports = {
     addOneRelation, //添加一组关系
     deleteOneRelation, //删除一组关系
     addManyKgEntity, //添加多组知识
+    searchKg,   //查询特定的关系
 }
