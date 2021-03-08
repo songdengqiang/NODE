@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const fs = require('fs')
 const packages = require('../../../myPackage');
 const neo4j = require('neo4j-driver');
 const {
@@ -11,6 +12,8 @@ const {
 } = require('python-shell');
 const multiparty = require('multiparty');
 const neo4JCon = require('../../../public/mypackage/connectNeo4j')
+const hosts = MP.getLocalIpv4(); //获取本机的IP地址
+
 /* 用户界面功能 */
 router.get('/ceshi', function (req, res) {
     res.send('成功!')
@@ -120,6 +123,11 @@ router.post('/deleteKg', function (req, res) {
         res.send(data)
     })
 })
+router.get('/deleteAKg', function (req, res) {
+    neo4JCon.deleteAll(function (data) {
+        res.send('成功')
+    })
+}) //删除所有的知识节点
 // 添加多组知识
 router.post('/addManyKg1', function (req, res) {
     if (req.body === []) {
@@ -202,6 +210,7 @@ router.post('/searchKg1', function (req, res) {
 })
 // tabular页面的相关路由
 router.post('/pdfsubmit', function (req, res) {
+    MP.delDirFile('./router/User/project/zb_python/fileData')
     let form = new multiparty.Form({
         uploadDir: './router/User/project/zb_python/fileData'
     })
@@ -225,7 +234,7 @@ router.post('/pdfDeal', function (req, res) {
                     let objList = []
                     for (let i of data) {
                         let obj = {}
-                        obj.path = `http://10.206.135.180:8888/zb_pythonF/table-detect-master/test_in/${i}`
+                        obj.path = `http://${hosts}:8888/zb_pythonF/table-detect-master/test_in/${i}`
                         objList.push(obj)
                     }
                     res.send({
@@ -250,21 +259,24 @@ router.get('/pdfExtract', function (req, res) {
         mode: 'text',
         pythonOptions: ['-u'], // get print results in real-time
         args: ['value1', 'value2', 'value3']
+
     };
     let pro_dirP = process.cwd()
     // console.log('起始目录：' + process.cwd());
     try {
         process.chdir('./public/zb_pythonF/table-detect-master'); //切换进程的文件目录
+        MP.delDirFile('./test_out')
+        MP.delDirFile('./imgcut')
         // console.log('新目录：' + process.cwd());
         PythonShell.run('table_detect.py', options, function (err, results) {
             if (err) throw err;
-            console.log(results)
+            // console.log(results)
             // results is an array consisting of messages collected during execution
-            MP.searchFile('./imgcut', function (data) {
+            MP.searchFile('./test_out', function (data) {
                 let objList = []
                 for (let i of data) {
                     let obj = {}
-                    obj.path = `http://10.206.135.180:8888/zb_pythonF/table-detect-master/imgcut/${i}`
+                    obj.path = `http://${hosts}:8888/zb_pythonF/table-detect-master/test_out/${i}`
                     objList.push(obj)
                 }
                 res.send({
@@ -278,7 +290,125 @@ router.get('/pdfExtract', function (req, res) {
         console.log('chdir：' + err);
         process.chdir(pro_dirP)
     }
-
-    // res.send('dd')
 })
+
+router.get('/pdfExtract1', function (req, res) {
+    // console.log('dfsd')
+    let options = {
+        mode: 'text',
+        pythonOptions: ['-u'], // get print results in real-time
+        args: ['value1', 'value2', 'value3']
+    };
+    let pro_dirP = process.cwd()
+    // console.log('起始目录：' + process.cwd());
+    try {
+        process.chdir('./public/zb_pythonF/table-detect-master'); //切换进程的文件目录
+        MP.searchFile('./imgcut', function (data) {
+            let objList = []
+            for (let i of data) {
+                let obj = {}
+                obj.path = `http://${hosts}:8888/zb_pythonF/table-detect-master/imgcut/${i}`
+                objList.push(obj)
+            }
+            res.send({
+                title: '成功',
+                data: objList
+            })
+            process.chdir(pro_dirP)
+        })
+    } catch (err) {
+        console.log('chdir：' + err);
+        process.chdir(pro_dirP)
+    }
+})
+router.post('/ocrFunc', function (req, res) {
+    // console.log(req.body)
+    let options = {
+        mode: 'text',
+        pythonOptions: ['-u'], // get print results in real-time
+        args: ['value1']
+    };
+    let pro_dirP = process.cwd()
+    try {
+        process.chdir('./public/pythonModule/百度AI调用表格识别接口'); //切换进程的文件目录
+        MP.delDirFile('./picture')
+        process.chdir(pro_dirP)
+        process.chdir('./public/zb_pythonF/table-detect-master/imgcut'); //切换进程的文件目录
+        let strP = req.body.path.split('/')
+        MP.copyImg(`./${strP[strP.length-1]}`, '../../../public/pythonModule/百度AI调用表格识别接口/picture/result.png')
+        // let list = fs.readFileSync(`./${strP[strP.length-1]}`)
+        // console.log(list)
+        process.chdir(pro_dirP)
+        process.chdir('./public/pythonModule/百度AI调用表格识别接口'); //切换进程的文件目录
+        PythonShell.run('api.py', options, function (err, results) {
+            if (err) {
+                console.log(err)
+                res.send('失败')
+            } else {
+                // console.log(results)
+                fs.readFile('export.txt', 'utf-8', (err, data) => {
+                    if (err) res.send(err)
+                    // console.log(data)
+                    res.send({
+                        title: '成功',
+                        textContent: data,
+                        textPath: `http://${hosts}:8888/pythonModule/百度AI调用表格识别接口/export.txt`
+                    })
+                    process.chdir(pro_dirP)
+                })
+            };
+        });
+    } catch (err) {
+        console.log('chdir：' + err);
+        res.send('失败')
+        process.chdir(pro_dirP)
+    }
+})
+router.post('/ocrFunc1', function (req, res) {
+    // console.log(req.body)
+    MP.delDirFile('./public/pythonModule/百度AI调用表格识别接口/picture')
+    let form = new multiparty.Form({
+        uploadDir:'./public/pythonModule/百度AI调用表格识别接口/picture'
+    })
+    form.parse(req,(err, fields, files) =>{
+        if(err){
+            console.log(err)
+            res.send('失败1')
+        }else{
+            let options = {
+                mode: 'text',
+                pythonOptions: ['-u'], // get print results in real-time
+                args: ['value1']
+            };
+            let pro_dirP = process.cwd()
+            try {
+                process.chdir('./public/pythonModule/百度AI调用表格识别接口'); //切换进程的文件目录
+                PythonShell.run('api.py', options, function (err, results) {
+                    if (err) {
+                        console.log(err)
+                        res.send('失败2')
+                    } else {
+                        // console.log(results)
+                        fs.readFile('export.txt', 'utf-8', (err, data) => {
+                            if (err) res.send(err)
+                            // console.log(data)
+                            res.send({
+                                title: '成功',
+                                textContent: data,
+                                textPath: `http://${hosts}:8888/pythonModule/百度AI调用表格识别接口/export.txt`
+                            })
+                            process.chdir(pro_dirP)
+                        })
+                    };
+                });
+            } catch (err) {
+                console.log('chdir：' + err);
+                res.send('失败')
+                process.chdir(pro_dirP)
+            }
+            // res.send('成功')
+        }
+    })
+})
+
 module.exports = router;

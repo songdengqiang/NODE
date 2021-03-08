@@ -2,7 +2,7 @@ const neo4j = require('neo4j-driver')
 const {
     list
 } = require('pm2')
-const db = 'bolt://localhost:11003' // http://localhost:7474 bolt://localhost:7687
+const db = 'bolt://localhost:11001' // http://localhost:7474 bolt://localhost:7687
 const dbuser = 'Graphs'
 const dbpassword = '123456789'
 // 连接数据库
@@ -214,6 +214,24 @@ let searchKg = (data,callback) =>{
     }
     
 }
+let deleteAll = (callback) =>{
+    const session = driver.session({
+        defaultAccessMode: neo4j.session.READ
+    })
+    session
+        .run(`match(n) OPTIONAL match(n)-[r]-() delete n,r`)
+        .then(result => {
+            let entityList = []
+            result.records.forEach(record => {
+                entityList.push(record._fields)
+            })
+            callback(entityList)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+        .then(() => session.close())
+}
 
 
 module.exports = {
@@ -225,4 +243,5 @@ module.exports = {
     deleteOneRelation, //删除一组关系
     addManyKgEntity, //添加多组知识
     searchKg,   //查询特定的关系
+    deleteAll,  //删除所有的知识
 }

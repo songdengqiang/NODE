@@ -29,28 +29,30 @@ module.exports = function () {
                 }
             }
         }
-    };//获取本机的内网地址：具有一个返回值（IPv4）
+    }; //获取本机的内网地址：具有一个返回值（IPv4）
 
     this.getLocalIpv6 = function () {
         return strIpv6 = dns.getServers();
-    };//获取本机的内网地址：具有一个返回值(数组)（IPv6）
+    }; //获取本机的内网地址：具有一个返回值(数组)（IPv6）
 
     this.getLocalTime = function () {
         var data = new Date();
         return o = {
             Year: data.getFullYear(), //获取年份值
-            Month: data.getMonth() + 1,   //获取月份值，得到的月份值比真实值少一个月
-            Day: data.getDate(),//获取日期
-            Weekday: "周" + data.getDay(),//获取星期
+            Month: data.getMonth() + 1, //获取月份值，得到的月份值比真实值少一个月
+            Day: data.getDate(), //获取日期
+            Weekday: "周" + data.getDay(), //获取星期
             Hours: data.getHours(), //获取当前时间的小时值
             Minutes: data.getMinutes(), //获取当前时间的分钟值
-            Seconds: data.getSeconds()//获取当前时间的秒值
+            Seconds: data.getSeconds() //获取当前时间的秒值
         }
 
-    };//获取本地的时间
+    }; //获取本地的时间
 
     this.readXmlFile = function (filename, fatherArray, callback) {
-        var p = new XmlParser({strict: true});
+        var p = new XmlParser({
+            strict: true
+        });
         var xml = fs.readFileSync(filename); // XML in the examples direct
         var xmlNode = p.parseString(xml, function (err, xmlNode) {
             if (err) {
@@ -61,43 +63,68 @@ module.exports = function () {
             callback(nodes);
         });
     };
-    this.readJson = function (fileName,callback) {
-        fs.readFile('./public/data/'+fileName,function(err,date){
+    this.readJson = function (fileName, callback) {
+        fs.readFile('./public/data/' + fileName, function (err, date) {
             const jsonData = JSON.parse(date)
             callback(jsonData)
         })
     }
-    this.writeJson = function (fileName,heros,callback) {
-        fs.writeFile('./public/data/'+fileName, JSON.stringify(heros),function(err,data){
+    this.writeJson = function (fileName, heros, callback) {
+        fs.writeFile('./public/data/' + fileName, JSON.stringify(heros), function (err, data) {
             callback('成功')
         })
     }
-    this.addJson = function (fileName,heros,callback) {
-        fs.readFile('./public/data/'+fileName,function(err,date){
+    this.addJson = function (fileName, heros, callback) {
+        fs.readFile('./public/data/' + fileName, function (err, date) {
             const jsonData = JSON.parse(date)
             jsonData.push(heros)
-            fs.writeFileSync('./public/data/'+fileName, JSON.stringify(jsonData),function(err,data){
+            fs.writeFileSync('./public/data/' + fileName, JSON.stringify(jsonData), function (err, data) {
                 console.log(err)
             })
         })
-        
+
     }
-    this.searchFile = function(pathName,callback){
-        fs.readdir(pathName, function(err, files){
+    this.searchFile = function (pathName, callback) {
+        fs.readdir(pathName, function (err, files) {
             var dirs = [];
-            (function iterator(i){
-              if(i == files.length) {
-                // console.log(dirs);
-                callback(dirs)
-                return ;
-              }
-              fs.stat(path.join(pathName, files[i]), function(err, data){     
-                if(data.isFile()){               
-                    dirs.push(files[i]);
+            (function iterator(i) {
+                if (i == files.length) {
+                    // console.log(dirs);
+                    callback(dirs)
+                    return;
                 }
-                iterator(i+1);
-               });   
+                fs.stat(path.join(pathName, files[i]), function (err, data) {
+                    if (data.isFile()) {
+                        dirs.push(files[i]);
+                    }
+                    iterator(i + 1);
+                });
             })(0);
         });
-    }//获取文件夹下的所有文件名和路径
-};
+    } //获取文件夹下的所有文件名和路径
+    this.delDirFile = function (path) {
+        let files = [];
+        if (fs.existsSync(path)) {
+            files = fs.readdirSync(path);
+            files.forEach((file, index) => {
+                let curPath = path + "/" + file;
+                if (fs.statSync(curPath).isDirectory()) {
+                    delDir(curPath); //递归删除文件夹
+                } else {
+                    fs.unlinkSync(curPath); //删除文件
+                }
+            });
+        }
+    }//删除文件夹下的文件
+    this.copyImg = function (oPath,nPath) {
+        fs.readFile(oPath,function(err,originBuffer){            //读取图片位置（路径）
+            console.log(Buffer.isBuffer(originBuffer));
+        
+            fs.writeFile(nPath,originBuffer,function(err){      //生成图片2(把buffer写入到图片文件)
+                if (err) {
+                    console.log(err)
+                }
+            });
+        })
+    } // 下载图片
+}

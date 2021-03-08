@@ -7,8 +7,11 @@ table detect with yolo
 """
 import cv2
 import numpy as np
+
+
 from config import tableModelDetectPath
 from utils import nms_box,letterbox_image,rectangle
+
 
 tableDetectNet  = cv2.dnn.readNetFromDarknet(tableModelDetectPath.replace('.weights','.cfg'),tableModelDetectPath)#
 
@@ -105,6 +108,9 @@ if __name__=='__main__':
     import time
     import os
     import cv2
+    import io
+    import sys
+    sys.stdout = io.TextIOWrapper(sys.stdout.detach(),encoding='utf-8')
     # 源目录
     MyPath = 'C:/Users/xiaoqiang/Desktop/NODE/public/zb_pythonF/table-detect-master/test_in/'
     # 输出目录
