@@ -232,6 +232,33 @@ let deleteAll = (callback) =>{
         })
         .then(() => session.close())
 }
+let modifyAttr = (data,callback) =>{
+    const session = driver.session({
+        defaultAccessMode: neo4j.session.READ
+    })
+    let strAttr = ''
+    Object.keys(data).forEach((key) => {
+        if(key !== 'id' && key !== 'labels'){
+            strAttr = `${strAttr}n.${key}="${data[key]}",`
+        }
+    })
+    strAttr = strAttr.substring(0, strAttr.length - 1);
+    // console.log(`match(n) where n.name ="${data.name}" remove n:${data.labels[1]} set ${strAttr},n:${data.labels[0]} return n`)
+    session
+        .run(`match(n) where n.name ="${data.name}" remove n:${data.labels[1]} set ${strAttr},n:${data.labels[0]} return n`)
+        .then(result => {
+            let entityList = []
+            result.records.forEach(record => {
+                entityList.push(record._fields)
+            })
+            // console.log(entityList)
+            callback('成功')
+        })
+        .catch(error => {
+            callback('失败')
+        })
+        .then(() => session.close())
+}
 
 
 module.exports = {
@@ -244,4 +271,5 @@ module.exports = {
     addManyKgEntity, //添加多组知识
     searchKg,   //查询特定的关系
     deleteAll,  //删除所有的知识
+    modifyAttr,  // 修改节点属性和标签
 }

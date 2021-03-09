@@ -410,5 +410,11 @@ router.post('/ocrFunc1', function (req, res) {
         }
     })
 })
+router.post('/modifyAttr',function(req,res){
+    // console.log(req.body)
+    neo4JCon.modifyAttr(req.body,(datas)=>{
+        res.send(datas)
+    })
+})
 
 module.exports = router;
