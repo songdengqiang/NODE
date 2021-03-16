@@ -1,51 +1,44 @@
 [
     {
-        "name": "红色(red)",
-        "decimal_R": "255",
-        "decimal_G": "0",
-        "decimal_B": "0",
-        "hexadecimal": "FF0000"
+        "eName": "红色(red)",
+        "decimal": "rgb(255,0,0)",
+        "hexadecimal": "FF0000",
+        "descript":""
     },
     {
-        "name": "橙色(orange)",
-        "decimal_R": "255",
-        "decimal_G": "165",
-        "decimal_B": "0",
+        "eName": "橙色(orange)",
+        "decimal": "rgb(255,165,0)",
+        "descript":"",
         "hexadecimal": "FFA500"
     },
     {
-        "name": "黄色(yellow)",
-        "decimal_R": "255",
-        "decimal_G": "255",
-        "decimal_B": "0",
+        "eName": "黄色(yellow)",
+        "decimal": "rgb(255,255,0)",
+        "descript":"",
         "hexadecimal": "FFFF00"
     },
     {
-        "name": "绿色(green)",
-        "decimal_R": "0",
-        "decimal_G": "255",
-        "decimal_B": "0",
+        "eName": "绿色(green)",
+        "decimal": "rgb(0,255,0)",
+        "descript":"",
         "hexadecimal": "00FF00"
     },
     {
-        "name": "青色(cyan)",
-        "decimal_R": "0",
-        "decimal_G": "127",
-        "decimal_B": "255",
+        "eName": "青色(cyan)",
+        "decimal": "rgb(0,127,255)",
+        "descript":"",
         "hexadecimal": "007FFF"
     },
     {
-        "name": "蓝色(blue)",
-        "decimal_R": "0",
-        "decimal_G": "0",
-        "decimal_B": "255",
+        "eName": "蓝色(blue)",
+        "decimal": "rgb(0,0,255)",
+        "descript":"",
         "hexadecimal": "0000FF"
     },
     {
-        "name": "紫色(violet)",
-        "decimal_R": "139",
-        "decimal_G": "0",
-        "decimal_B": "255",
+        "eName": "紫色(violet)",
+        "decimal": "rgb(139,0,255)",
+        "descript":"",
         "hexadecimal": "8B00FF"
     }
 ]

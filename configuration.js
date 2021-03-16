@@ -2,16 +2,16 @@ const session = require('express-session');
 const body_parser = require('body-parser');
 const path = require('path');
 const express = require('express');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const app = express();
-const url = "mongodb://localhost:27017/xiaoqiang";
-const options = {
-    db: {native_parser: true},
-    server: {poolSize: 5},//最大连接池为5
-    // replset: {rs_name: 'myReplicaSetName'},
-    user: 'xiao',
-    pass: '20160626'
-}
+// const url = "mongodb://localhost:27017/admin";
+// const options = {
+//     db: {native_parser: true},
+//     server: {poolSize: 5},//最大连接池为5
+//     // replset: {rs_name: 'myReplicaSetName'},
+//     // user: 'xiao',
+//     // pass: '20160626'
+// }
 
 exports.setting = function () {
     // app.engine('.html', require('ejs').__express);//设置模板引擎
@@ -45,7 +45,7 @@ exports.setting = function () {
     // // mongoose.connect(url); //链接默认的地址
 
     // mongoose.connection.on('connected', function () {
-    //     console.log('Mongoose connection open to ' + 'mongodb://localhost:27017/xiaoqiang'); }); /** * 连接异常 */
+    //     console.log('Mongoose connection open to ' + 'mongodb://localhost:27017/admin'); }); /** * 连接异常 */
     // mongoose.connection.on('error',function (err) {
     //     console.log('Mongoose connection error: ' + err); }); /** * 连接断开 */
     // mongoose.connection.on('disconnected', function () {

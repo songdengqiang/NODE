@@ -17,7 +17,7 @@ const app = configuration.setting();
 app.get('/',function (req,res) {
     res.send("系统启动！")
 });
-app.use('/login',login);
+// app.use('/login',login);
 app.use('/user',user);
 
 //状态的监听
